@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main() {
+    int gasValue;
+    int threshold = 300;   // Set your threshold value
+
+    printf("Gas Leak Monitoring System Started...\n");
+
+    while (1) {  
+        printf("Enter Gas Sensor Value: ");
+        scanf("%d", &gasValue);   // Simulate sensor reading
+
+        printf("Gas Value: %d\n", gasValue);
+
+        if (gasValue > threshold) {
+            printf("ALERT! Gas Leakage Detected!\n");
+            printf("Buzzer: ON\n");
+            printf("Red LED: ON\n");
+        } else {
+            printf("Safe Environment.\n");
+            printf("Buzzer: OFF\n");
+            printf("Red LED: OFF\n");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+/*Gas Leak Monitoring System Started...output
+Enter Gas Sensor Value: 500
+Gas Value: 500
+ALERT! Gas Leakage Detected!
+Buzzer: ON
+Red LED: ON
+
+Enter Gas Sensor Value: 300
+Gas Value: 300
+Safe Environment.
+Buzzer: OFF
+Red LED: OFF*/
